@@ -1,0 +1,23 @@
+{
+    "true_positive": 28,
+    "false_positive": 27,
+    "false_negative": 43,
+    "true_negative": 44,
+    "precision": 0.5074,
+    "recall": 0.507,
+    "f1": 0.5072,
+    "accuracy": 0.507,
+    "FN_rate": 0.3028,
+    "FP_rate": 0.1901,
+    "TN_rate": 0.3099,
+    "TP_rate": 0.1972,
+    "pair_total": 71,
+    "pair_right": 17,
+    "pair_1": 11,
+    "pair_0": 27,
+    "pair_wrong": 16,
+    "pair_accuracy": 0.2394,
+    "pair_1_rate": 0.1549,
+    "pair_0_rate": 0.3803,
+    "false_pair_rate": 0.2254
+}
