@@ -31,7 +31,7 @@ We also observed robustness issues.
 For example, gpt-oss-20b tended to enter reasoning loops, repeatedly evaluating the same code without progressing towards a final answer.
 This behavior was often accompanied by explicit signals (_“Stop repeating”_) and ultimately resulted in termination due to the token limit (see example eval log [here](eval_logs/VulRAG-eval-gpt-oss-20b-gpt-oss-20b_64574.out)).
 
-### 📈 Full Table of evaluations:
+📈 **Full Table of evaluations**:
 > **_NOTE:_** * = incomplete coverage of dataset items; best results in bold.
 
 | Family        | Model Identifier                          | Pair. Accuracy | Pairs   |
