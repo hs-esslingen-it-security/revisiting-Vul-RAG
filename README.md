@@ -78,7 +78,7 @@ Vul-RAG is a vulnerability detection tool based on LLMs that incorporates RAG to
 ## Dependencies
 > **_NOTE:_** initial dependencies updated; can be found in ``vul-rag-rep.yml``
 
-Python version 3.12
+Python version 3.12 <br>
 CUDA 12.4
 
 You can install the dependencies via conda using the following command:
