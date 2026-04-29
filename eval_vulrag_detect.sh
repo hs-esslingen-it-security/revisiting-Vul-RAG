@@ -2,7 +2,8 @@
 # -----------------------------
 if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]; then
     echo "Usage: $0 <MODEL_NAME> <SUMMARY_MODEL_NAME> [KNOWLEDGE_MODEL]"
-    echo "  If KNOWLEDGE_MODEL is provided, knowledge will be loaded from add_vulnerability_knowledge/<KNOWLEDGE_MODEL>/*_data.json"
+    echo "  - If KNOWLEDGE_MODEL is omitted, uses: vulnerability_knowledge/*_knowledge.json"
+    echo "  - If KNOWLEDGE_MODEL is provided, uses: add_vulnerability_knowledge/<KNOWLEDGE_MODEL>/*_knowledge.json"
     exit 1
 fi
 
@@ -11,16 +12,16 @@ export MODEL
 SM="$2"
 export SM
 
+KNOW_SUFFIX="_knowledge.json"
+
 # If a knowledge model is provided, use its folder and *_data.json files.
 if [ "$#" -eq 3 ]; then
     KNOW_MODEL="$3"
     export KNOW_MODEL
     KNOW_BASE_DIR="add_vulnerability_knowledge/${KNOW_MODEL}"
-    KNOW_SUFFIX="_data.json"
     KB_NAME_SUFFIX="__kb-${KNOW_MODEL}"
 else
     KNOW_BASE_DIR="vulnerability_knowledge"
-    KNOW_SUFFIX="_knowledge.json"
     KB_NAME_SUFFIX=""
 fi
 
@@ -57,7 +58,7 @@ echo "Output dir: ${MODEL_SM_DIR}"
 echo "============================================================"
 
 for DATASET in "${DATASETS[@]}"; do
-  BASE="${DATASET}"  # already without suffix
+  BASE="${DATASET}"  
   OUT_FILE="${BASE}_result_${MODEL}__sum-${SM}${KB_NAME_SUFFIX}.json"
   OUT_PATH="${MODEL_SM_DIR}/${OUT_FILE}"
   KNOW_FILE="${BASE}${KNOW_SUFFIX}"
@@ -90,7 +91,7 @@ for DATASET in "${DATASETS[@]}"; do
       --max_knowledge 3
     { set +x; } 2>/dev/null
     echo "DONE  detect ${MODEL} + ${SM} on ${DATASET}"
-  } 
+  } # |& tee "${LOG_FILE}"
 done
 
 # -----------------------------
