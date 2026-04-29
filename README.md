@@ -1,6 +1,6 @@
 # Revisiting Vul-RAG: Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models 🧠👩‍💻🔍
 
-LLMs have shown strong potential for automated software vulnerability detection, particularly in retrieval-augmented generation (RAG) settings. However, for approaches relying on proprietary models and APIs, reproducibility and replicability remain unexplored, raising the question of whether reported results generalize or depend primarily on specific model choices. In this work, we present a reproducibility study of Vul-RAG in a fully local and open-weights setting. 
+LLMs have shown strong potential for automated software vulnerability detection, particularly in retrieval-augmented generation (RAG) settings. However, for approaches relying on proprietary models and APIs, reproducibility and replicability remain largely unexplored, raising the question of whether reported results generalize or depend primarily on specific model choices. In this work, we present a reproducibility study of Vul-RAG in a fully local and open-weights setting. 
 
 We revisit Vul-RAG under the following conditions:
 - Fully local inference using HuggingFace models
@@ -19,19 +19,18 @@ We revisit Vul-RAG under the following conditions:
 
 
 💡 We find that Vul-RAG is reproducible for Qwen2.5-Coder but not for DeepSeek-Coder-V2.
-Across a diverse set of LLMs, including newer model generations (RQ2), general-purpose models (RQ3), and reasoning models (RQ4) with varying parameter scales (RQ5), we observe only limited performance differences.
-Reasoning models achieve the highest pairwise accuracy of 0.29 (code pairs for which both the vulnerable and the patched function are correctly classified).
+Across a diverse set of LLMs, including newer model generations~(RQ2), general-purpose models~(RQ3), and reasoning models~(RQ4) with varying parameter scales~(RQ5), we observe only small performance differences.
+Reasoning models achieve the highest pairwise accuracy of 0.29.
 In contrast, neither increased model scale nor newer model generations yield substantial improvements.
-These results consistently indicate a performance plateau in Vul-RAG, suggesting that effectiveness is largely independent of model choice. 
-Instead, the primary bottleneck lies in the quality of knowledge representation and retrieval.
-From a practical perspective, the findings show that large parameter scales are not required for competitive performance, allowing for efficient on-premise deployment with smaller models. 
-Future work should focus on improving the knowledge base quality and retrieval strategies to overcome these limitations.
+These results consistently indicate a performance plateau in Vul-RAG and highlight the inherent difficulty of the pairwise discrimination task.
+From a practical perspective, the findings show that large parameter scales are not required for competitive performance, allowing for efficient deployment with smaller models. 
+Future work should focus on improving the knowledge base quality and retrieval strategies and investigate where model capability matters most in RAG-based pipelines to overcome the existing performance limitations.
 For more details, see our 📚 [publication](#citations). 
 
 
 To 🔁 reproduce our results:
 - Use the modified Vul-RAG pipeline (see below)
-- Select a model from `utils/llm_client.py`
+- Select a model from or add a model to `utils/llm_client.py`
 - Run: ``bash eval_vulrag_detect.sh <MODEL_NAME> <SUMMARY_MODEL_NAME>``
 - Analyze outputs using the provided scripts or notebook
 
