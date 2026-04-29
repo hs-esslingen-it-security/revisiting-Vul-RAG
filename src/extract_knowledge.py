@@ -253,9 +253,13 @@ def extract_knowledge_pipeline(args):
     MODEL_CLIENT = llm_client.get_llm_client(args.model_name)
     print(MODEL_CLIENT.model_name)
     
+    # normalize the output filename to use _knowledge.json
+    base_prefix = args.input_file_name.replace(".json", "").replace("_data", "")
+    output_filename = f"{base_prefix}_knowledge.json"
+
     # output directory and file path
     output_dir = os.path.join("add_vulnerability_knowledge", args.model_name)
-    output_file_path = os.path.join(output_dir, args.input_file_name)
+    output_file_path = os.path.join(output_dir, output_filename)
 
     if not os.path.exists(output_dir):
         print(f"Creating directory: {output_dir}")
