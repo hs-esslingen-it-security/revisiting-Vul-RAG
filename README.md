@@ -84,7 +84,7 @@ CUDA 12.4
 
 You can install the dependencies via conda using the following command:
 ```bash
-conda create --file vul-rag-rep.yml
+conda env create --file vul-rag-rep.yml
 ```
 
 All experiments were conducted on a high-performance computing cluster. 
