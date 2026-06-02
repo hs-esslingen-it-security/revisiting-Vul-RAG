@@ -1,4 +1,17 @@
-# Revisiting Vul-RAG: Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models 🧠👩‍💻🔍
+<div align="center">
+
+# Revisiting Vul-RAG 🧠👩‍💻🔍
+
+**Revisiting Vul-RAG: Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models**
+
+[![arXiv](https://img.shields.io/badge/arXiv-2606.xxxxx-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2606.xxxxx)
+
+[**Sabrina Kaniewski**](https://www.hs-esslingen.de/personen/sabrina-kaniewski)<sup>1</sup> · [**Fabian Schmidt**](https://rl.uni-freiburg.de/people/schmidt)<sup>1</sup> · [**Tobias Heer**](https://www.hs-esslingen.de/personen/tobias-heer)<sup>1</sup>
+
+<sup>1</sup> **Esslingen University of Applied Sciences**
+
+</div>
+
 
 LLMs have shown strong potential for automated software vulnerability detection, particularly in retrieval-augmented generation (RAG) settings. However, for approaches relying on proprietary models and APIs, reproducibility and replicability remain largely unexplored, raising the question of whether reported results generalize or depend primarily on specific model choices. In this work, we present a reproducibility study of Vul-RAG in a fully local and open-weights setting. 
 
