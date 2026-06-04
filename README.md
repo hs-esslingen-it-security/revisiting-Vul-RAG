@@ -4,7 +4,7 @@
 
 **Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models**
 
-[![arXiv](https://img.shields.io/badge/arXiv-2606.xxxxx-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2606.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.04739-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2606.04739)
 
 [**Sabrina Kaniewski**](https://www.hs-esslingen.de/personen/sabrina-kaniewski)<sup>1</sup> · [**Fabian Schmidt**](https://rl.uni-freiburg.de/people/schmidt)<sup>1</sup> · [**Tobias Heer**](https://www.hs-esslingen.de/personen/tobias-heer)<sup>1</sup>
 
