@@ -210,12 +210,14 @@ _____
 # Citations
 If you use **this work**, please cite! 📚 
 ```bibtex
-@article{kaniewskiRevisitingVulRAG2026,
-    title={Revisiting Vul-RAG: Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models}, 
-    author={Kaniewski, Sabrina and Schmidt, Fabian and Heer, Tobias},
-    booktitle = {Proceedings of the 2nd International Workshop on Artificial Intelligence, Cyber and Cyber-Physical Security (AI\&CCPS)},
+@inproceedings{kaniewskiRevisitingVulRAG2026,
+    title     = {{Revisiting Vul-RAG: Reproducibility and Replicability of RAG-based Vulnerability Detection with Open-Weight Models}}, 
+    author    = {Kaniewski, Sabrina and Schmidt, Fabian and Heer, Tobias},
+    booktitle = {International Workshop on Artificial Intelligence, Cyber and Cyber-Physical Security (AI\&CCPS)},
     year      = {2026},
-    note      = {Accepted at AI\&CCPS 2026, co-located with the 21st International Conference on Availability, Reliability and Security (ARES 2026)}
+    month     = {aug},
+    address   = {Linköping, Sweden}
+    note      = {Accepted at AI\&CCPS 2026, co-located with the International Conference on Availability, Reliability and Security (ARES 2026)}
 }
 ```
 
